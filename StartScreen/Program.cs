@@ -9,16 +9,37 @@ namespace StartScreen
     class Program
     {
         static int firstOrNot = 0;
+        static string playerName;
+        static string secretWord = "UMBRELLA";
+        static string maskedWord;
+        static string tryCharacter;
 
         static void Main(string[] args)
         {
-            WelcomeMenu();
-            //Testar en liten uppdatering
+            Menu();
 
-            
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("Here is the word we are lookig for, now guessing characters it's up to you");
+
+            int lettersInWord = secretWord.Length;
+
+            Console.WriteLine();
+            Console.Write("\t");
+            for (int i = 0; i < lettersInWord; i++)
+            {
+                Console.Write("* ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("What character would you like to try? ");
+            tryCharacter = Console.ReadLine();
+
+            RightOrNot();
         }
 
-        static void WelcomeMenu()
+        static void Menu()
             {
             Console.Clear();
                 Console.WriteLine("\n                                                     ");
@@ -48,10 +69,9 @@ namespace StartScreen
             while (firstOrNot < 1)
                 {
                     Console.Beep(850, 210);
-                    Console.Beep(1250, 210);
-                    Console.Beep(1650, 210);
+                   /* Console.Beep(1250, 210);
+                    Console.Beep(1650, 210);*/
                     firstOrNot++;
-                  //  break;
                 }
 
 
@@ -70,7 +90,9 @@ namespace StartScreen
                         break;
                     default:
                         Console.WriteLine("Pleace choose 1, 2 or 3");
-                        WelcomeMenu();
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        Menu();
                     break;
                     }
 
@@ -83,15 +105,25 @@ namespace StartScreen
             Console.Clear();
             Console.WriteLine("Instruktioner för att spela!");
             Console.ReadLine();
-            WelcomeMenu();
+            Menu();
 
         }
         static void StartGame()
         {
             Console.Clear();
-            Console.WriteLine("Oj va spelet spelar");
+            Console.Write("What´s your name: ");
+            playerName = Console.ReadLine();
+
+            Console.WriteLine("Welcome " + playerName + " to Hangman!");
+            
             Console.ReadLine();
-            WelcomeMenu();
+            //Menu();
+        }
+
+        static void RightOrNot()
+        {
+            Console.WriteLine("Nu är vi i RightOrNot " + tryCharacter);
+            Console.ReadLine();
         }
         static void EndScreen()
         {
