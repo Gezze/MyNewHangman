@@ -14,6 +14,7 @@ namespace StartScreen
         static string maskedWord;
         static string tryCharacter;
         //Test av GIT
+        //Test av git igen
 
         static void Main(string[] args)
         {
