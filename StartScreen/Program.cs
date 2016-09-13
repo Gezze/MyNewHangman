@@ -13,6 +13,7 @@ namespace StartScreen
         static string secretWord = "UMBRELLA";
         static string maskedWord;
         static string tryCharacter;
+        //Test av GIT
 
         static void Main(string[] args)
         {
