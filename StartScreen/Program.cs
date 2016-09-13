@@ -54,10 +54,9 @@ namespace StartScreen
                 Console.WriteLine("\t              ▓▒▓▓▒▓▒   ▓▒      ▓▒      ▓▒▓▓▒▓▒                        ");
                 Console.WriteLine("\t              ▓▒   ▓▒   ▓▒      ▓▒      ▓▒   ▓▒                        ");
                 Console.WriteLine("\t              ▓▒   ▓▒   ▓▓▓▓▓▒  ▓▒      ▓▒   ▓▒                        ");
-                Console.WriteLine("\t                                                                       ");
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine(".\t                                                                       ");
                 Console.WriteLine("\t                 Välkommen till Hangman!                               ");
-                Console.WriteLine("\t                                                                       ");
+                Console.WriteLine(".\t                                                                       ");
                 Console.WriteLine("\t                 1: Instruktioner                                      ");
                 Console.WriteLine("\t                 2: Starta spelet                                      ");
                 Console.WriteLine("\t                 3: Avsluta                                            ");
